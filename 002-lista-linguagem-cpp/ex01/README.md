@@ -1,4 +1,4 @@
-a e b)
+#### a e b)
 a | b | soma 
 :--: | :--: | :--:
 10 | 20 | 30
@@ -9,10 +9,13 @@ a | b | soma
 2000000000 | 1000000000 | -1294967296
 −1212121212 | −2987654321 | 935362436
 
-c)
+#### c)
 quando ultrapassa o limite do inteiro positivo do int ele vai somando do menor negativo
 limite int + = 2147483647
 2147483647  + 1 = -2147483648
 +2 = -2147483647
 +3 = -2147483646
 +4 = -2147483645
+
+#### d) 
+mudar o tipo de dado para long long ao inves de int

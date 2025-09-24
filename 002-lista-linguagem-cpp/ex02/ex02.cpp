@@ -1,6 +1,6 @@
 #include <iostream>
 
-double perimetro(int l1, int l2){
+double perimetro(double l1, double l2){
     return 2 * (l1 + l2)
 }
 
