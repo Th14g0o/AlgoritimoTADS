@@ -1,2 +1,3 @@
-g++ -Wall 002-lista-linguagem-cpp/ex03/programa.cpp -o programa
-call programa.exe
+g++ -Wall 003-lista-analise-de-algoritimos-001/ex04/programa.cpp -o programa
+REM call programa.exe
+programa.exe < 003-lista-analise-de-algoritimos-001/ex04/entrada.txt > saida.txt

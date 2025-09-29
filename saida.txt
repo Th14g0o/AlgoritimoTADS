@@ -1,0 +1,80 @@
+0 | 11 is prime
+0 | 11 Processing time: 0 microseconds(s)
+1 | 240000029 is prime
+1 | 240000029 Processing time: 2903001 microseconds(s)
+2 | 480000077 is prime
+2 | 480000077 Processing time: 5136998 microseconds(s)
+3 | 720000103 is prime
+3 | 720000103 Processing time: 8909997 microseconds(s)
+4 | 960000131 is prime
+4 | 960000131 Processing time: 10252994 microseconds(s)
+5 | 1200000133 is prime
+5 | 1200000133 Processing time: 13401997 microseconds(s)
+6 | 1440000137 is prime
+6 | 1440000137 Processing time: 14890994 microseconds(s)
+7 | 1680000149 is prime
+7 | 1680000149 Processing time: 17408997 microseconds(s)
+8 | 1920000161 is prime
+8 | 1920000161 Processing time: 19849996 microseconds(s)
+9 | 2160000163 is prime
+9 | 2160000163 Processing time: 22360999 microseconds(s)
+10 | 2400000167 is prime
+10 | 2400000167 Processing time: 24938998 microseconds(s)
+11 | 2640000217 is prime
+11 | 2640000217 Processing time: 27238997 microseconds(s)
+12 | 2880000251 is prime
+12 | 2880000251 Processing time: 29662998 microseconds(s)
+13 | 3120000253 is prime
+13 | 3120000253 Processing time: 32248000 microseconds(s)
+14 | 3360000257 is prime
+14 | 3360000257 Processing time: 34646001 microseconds(s)
+15 | 3600000269 is prime
+15 | 3600000269 Processing time: 37750999 microseconds(s)
+16 | 3840000289 is prime
+16 | 3840000289 Processing time: 42174997 microseconds(s)
+17 | 4080000293 is prime
+17 | 4080000293 Processing time: 42252999 microseconds(s)
+18 | 4320000329 is prime
+18 | 4320000329 Processing time: 45110998 microseconds(s)
+19 | 4560000343 is prime
+19 | 4560000343 Processing time: 49404995 microseconds(s)
+20 | 4800000347 is prime
+20 | 4800000347 Processing time: 54319998 microseconds(s)
+21 | 5040000443 is prime
+21 | 5040000443 Processing time: 59018999 microseconds(s)
+22 | 5280000461 is prime
+22 | 5280000461 Processing time: 63344999 microseconds(s)
+23 | 5520000463 is prime
+23 | 5520000463 Processing time: 69730995 microseconds(s)
+24 | 5760000473 is prime
+24 | 5760000473 Processing time: 72363996 microseconds(s)
+25 | 6000000511 is prime
+25 | 6000000511 Processing time: 77210999 microseconds(s)
+26 | 6240000581 is prime
+26 | 6240000581 Processing time: 81474997 microseconds(s)
+27 | 6480000589 is prime
+27 | 6480000589 Processing time: 86446999 microseconds(s)
+28 | 6720000593 is prime
+28 | 6720000593 Processing time: 92472998 microseconds(s)
+29 | 6960000613 is prime
+29 | 6960000613 Processing time: 95907998 microseconds(s)
+30 | 7200000623 is prime
+30 | 7200000623 Processing time: 100471000 microseconds(s)
+31 | 7440000629 is prime
+31 | 7440000629 Processing time: 104550000 microseconds(s)
+32 | 7680000703 is prime
+32 | 7680000703 Processing time: 109252001 microseconds(s)
+33 | 7920000707 is prime
+33 | 7920000707 Processing time: 113787999 microseconds(s)
+34 | 8160000721 is prime
+34 | 8160000721 Processing time: 118518001 microseconds(s)
+35 | 8400000727 is prime
+35 | 8400000727 Processing time: 123625999 microseconds(s)
+36 | 8640000749 is prime
+36 | 8640000749 Processing time: 126305999 microseconds(s)
+37 | 8880000757 is prime
+37 | 8880000757 Processing time: 130775000 microseconds(s)
+38 | 9120000809 is prime
+38 | 9120000809 Processing time: 135056000 microseconds(s)
+39 | 9360000827 is prime
+39 | 9360000827 Processing time: 139944000 microseconds(s)
