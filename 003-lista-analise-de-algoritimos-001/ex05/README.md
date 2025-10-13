@@ -1,58 +1,335 @@
 ### Determine as equações de tempo de execução dos algoritmos 2 e 3 para determinar se um número é primo.
 
-#### 
+#### algo 2 = 2n/2 + 3, algo 3 = 2n/2 + - 7
 
 ### Implemente, em C++, programas que implementem os algoritmos.
 
-#### 
+```cpp
+bool primo_algo1(long long n) {
+    int divs = 0; // 1
+    for (long long d = 1; d <= n; ++d) // n 
+        if (n % d == 0) divs = divs + 1; // n + 2(n)
+    return divs == 2; // 1
+    // total = 4n + 2
+}
+
+bool primo_algo2(long long n) {
+    int divs = 0; // 1
+    for (long long d = 1; d <= n / 2; ++d) // n/2
+        if (n % d == 0) divs = divs + 1; // n/2 + 2(n/2)
+    return divs == 1; // 1
+    // total = 2n/2 + 3
+}
+
+bool primo_algo3(long long n) {
+    if (n == 1) return false; // 1
+    if (n == 2) return true; // 1
+    if (n % 2 == 0) return false; // 1
+    int q_divs = 1; // 1
+    for (long long d = 3; d <= n / 2; ++d) // n/2 - 3
+        if (n % d == 0) q_divs = q_divs + 1; // n/2 - 3 + 2(n/2 - 3)
+    return q_divs == 1; // 1
+    // total = 2n/2 + - 7
+}
+```
 
 ### Realize testes e preencha a tabela a seguir com os resultados.
+Numero     | algo 1 | algo 2 | algo 2 
+:----:     | :----: | :----: | :----:
+11         |        |        |
+240000029|        |        |
+480000077|        |        |
+720000103|        |        |
+960000131|        |        |
+1200000133|        |        |
+1440000137|        |        |
+1680000149|        |        |
+1920000161|        |        |
+2160000163|        |        |
+2400000167|        |        |
+2640000217|        |        |
+2880000251|        |        |
+3120000253|        |        |
+3360000257|        |        |
+3600000269|        |        |
+3840000289|        |        |
+4080000293|        |        |
+4320000329|        |        |
+4560000343|        |        |
+4800000347|        |        |
+5040000443|        |        |
+5280000461|        |        |
+5520000463|        |        |
+5760000473|        |        |
+6000000511|        |        |
+6240000581|        |        |
+6480000589|        |        |
+6720000593|        |        |
+6960000613|        |        |
+7200000623|        |        |
+7440000629|        |        |
+7680000703|        |        |
+7920000707|        |        |
+8160000721|        |        |
+8400000727|        |        |
+8640000749|        |        |
+8880000757|        |        |
+9120000809|        |        |
+9360000827|        |        |
+9600000833 |        |        |
+9840000869 |        |        |
 
-Número | tempo em milisegundos
-:-----: | :--------
-11
-240000029
-480000077
-720000103
-960000131
-1200000133
-1440000137
-1680000149
-1920000161
-2160000163
-2400000167
-2640000217
-2880000251
-3120000253
-3360000257
-3600000269
-3840000289
-4080000293
-4320000329
-4560000343
-4800000347
-5040000443
-5280000461
-5520000463
-5760000473
-6000000511
-6240000581
-6480000589
-6720000593
-6960000613
-7200000623
-7440000629
-7680000703
-7920000707
-8160000721
-8400000727
-8640000749
-8880000757
-9120000809
-9360000827
-9600000833 
-9840000869 |
+algo e Iteração | Numero e tempo em milisegundos
+:------: | :------:
+algo1 : 0 | 11 is prime
+algo1 : 0 | 11 Processing time: 0 milliseconds(s)
+algo1 : 1 | 240000029 is prime
+algo1 : 1 | 240000029 Processing time: 2761 milliseconds(s)
+algo1 : 2 | 480000077 is prime
+algo1 : 2 | 480000077 Processing time: 4959 milliseconds(s)
+algo1 : 3 | 720000103 is prime
+algo1 : 3 | 720000103 Processing time: 8098 milliseconds(s)
+algo1 : 4 | 960000131 is prime
+algo1 : 4 | 960000131 Processing time: 9850 milliseconds(s)
+algo1 : 5 | 1200000133 is prime
+algo1 : 5 | 1200000133 Processing time: 12321 milliseconds(s)
+algo1 : 6 | 1440000137 is prime
+algo1 : 6 | 1440000137 Processing time: 14926 milliseconds(s)
+algo1 : 7 | 1680000149 is prime
+algo1 : 7 | 1680000149 Processing time: 19171 milliseconds(s)
+algo1 : 8 | 1920000161 is prime
+algo1 : 8 | 1920000161 Processing time: 20413 milliseconds(s)
+algo1 : 9 | 2160000163 is prime
+algo1 : 9 | 2160000163 Processing time: 22414 milliseconds(s)
+algo1 : 10 | 2400000167 is prime
+algo1 : 10 | 2400000167 Processing time: 26010 milliseconds(s)
+algo1 : 11 | 2640000217 is prime
+algo1 : 11 | 2640000217 Processing time: 27852 milliseconds(s)
+algo1 : 12 | 2880000251 is prime
+algo1 : 12 | 2880000251 Processing time: 30321 milliseconds(s)
+algo1 : 13 | 3120000253 is prime
+algo1 : 13 | 3120000253 Processing time: 32612 milliseconds(s)
+algo1 : 14 | 3360000257 is prime
+algo1 : 14 | 3360000257 Processing time: 36047 milliseconds(s)
+algo1 : 15 | 3600000269 is prime
+algo1 : 15 | 3600000269 Processing time: 38586 milliseconds(s)
+algo1 : 16 | 3840000289 is prime
+algo1 : 16 | 3840000289 Processing time: 41003 milliseconds(s)
+algo1 : 17 | 4080000293 is prime
+algo1 : 17 | 4080000293 Processing time: 41823 milliseconds(s)
+algo1 : 18 | 4320000329 is prime
+algo1 : 18 | 4320000329 Processing time: 47392 milliseconds(s)
+algo1 : 19 | 4560000343 is prime
+algo1 : 19 | 4560000343 Processing time: 50661 milliseconds(s)
+algo1 : 20 | 4800000347 is prime
+algo1 : 20 | 4800000347 Processing time: 55063 milliseconds(s)
+algo1 : 21 | 5040000443 is prime
+algo1 : 21 | 5040000443 Processing time: 60289 milliseconds(s)
+algo1 : 22 | 5280000461 is prime
+algo1 : 22 | 5280000461 Processing time: 64264 milliseconds(s)
+algo1 : 23 | 5520000463 is prime
+algo1 : 23 | 5520000463 Processing time: 70522 milliseconds(s)
+algo1 : 24 | 5760000473 is prime
+algo1 : 24 | 5760000473 Processing time: 74286 milliseconds(s)
+algo1 : 25 | 6000000511 is prime
+algo1 : 25 | 6000000511 Processing time: 78049 milliseconds(s)
+algo1 : 26 | 6240000581 is prime
+algo1 : 26 | 6240000581 Processing time: 83788 milliseconds(s)
+algo1 : 27 | 6480000589 is prime
+algo1 : 27 | 6480000589 Processing time: 90204 milliseconds(s)
+algo1 : 28 | 6720000593 is prime
+algo1 : 28 | 6720000593 Processing time: 93460 milliseconds(s)
+algo1 : 29 | 6960000613 is prime
+algo1 : 29 | 6960000613 Processing time: 97878 milliseconds(s)
+algo1 : 30 | 7200000623 is prime
+algo1 : 30 | 7200000623 Processing time: 102012 milliseconds(s)
+algo1 : 31 | 7440000629 is prime
+algo1 : 31 | 7440000629 Processing time: 106453 milliseconds(s)
+algo1 : 32 | 7680000703 is prime
+algo1 : 32 | 7680000703 Processing time: 111128 milliseconds(s)
+algo1 : 33 | 7920000707 is prime
+algo1 : 33 | 7920000707 Processing time: 116432 milliseconds(s)
+algo1 : 34 | 8160000721 is prime
+algo1 : 34 | 8160000721 Processing time: 120660 milliseconds(s)
+algo1 : 35 | 8400000727 is prime
+algo1 : 35 | 8400000727 Processing time: 126314 milliseconds(s)
+algo1 : 36 | 8640000749 is prime
+algo1 : 36 | 8640000749 Processing time: 127627 milliseconds(s)
+algo1 : 37 | 8880000757 is prime
+algo1 : 37 | 8880000757 Processing time: 132888 milliseconds(s)
+algo1 : 38 | 9120000809 is prime
+algo1 : 38 | 9120000809 Processing time: 138269 milliseconds(s)
+algo1 : 39 | 9360000827 is prime
+algo1 : 39 | 9360000827 Processing time: 142460 milliseconds(s)
+algo2 : 0 | 9600000833 is prime
+algo2 : 0 | 9600000833 Processing time: 57569 milliseconds(s)
+algo2 : 1 | 9840000869 is prime
+algo2 : 1 | 9840000869 Processing time: 59577 milliseconds(s)
+algo2 : 2 | 11 is prime
+algo2 : 2 | 11 Processing time: 0 milliseconds(s)
+algo2 : 3 | 240000029 is prime
+algo2 : 3 | 240000029 Processing time: 1304 milliseconds(s)
+algo2 : 4 | 480000077 is prime
+algo2 : 4 | 480000077 Processing time: 3006 milliseconds(s)
+algo2 : 5 | 720000103 is prime
+algo2 : 5 | 720000103 Processing time: 4244 milliseconds(s)
+algo2 : 6 | 960000131 is prime
+algo2 : 6 | 960000131 Processing time: 5071 milliseconds(s)
+algo2 : 7 | 1200000133 is prime
+algo2 : 7 | 1200000133 Processing time: 6336 milliseconds(s)
+algo2 : 8 | 1440000137 is prime
+algo2 : 8 | 1440000137 Processing time: 7625 milliseconds(s)
+algo2 : 9 | 1680000149 is prime
+algo2 : 9 | 1680000149 Processing time: 8865 milliseconds(s)
+algo2 : 10 | 1920000161 is prime
+algo2 : 10 | 1920000161 Processing time: 10894 milliseconds(s)
+algo2 : 11 | 2160000163 is prime
+algo2 : 11 | 2160000163 Processing time: 12063 milliseconds(s)
+algo2 : 12 | 2400000167 is prime
+algo2 : 12 | 2400000167 Processing time: 12674 milliseconds(s)
+algo2 : 13 | 2640000217 is prime
+algo2 : 13 | 2640000217 Processing time: 13931 milliseconds(s)
+algo2 : 14 | 2880000251 is prime
+algo2 : 14 | 2880000251 Processing time: 15266 milliseconds(s)
+algo2 : 15 | 3120000253 is prime
+algo2 : 15 | 3120000253 Processing time: 20524 milliseconds(s)
+algo2 : 16 | 3360000257 is prime
+algo2 : 16 | 3360000257 Processing time: 18683 milliseconds(s)
+algo2 : 17 | 3600000269 is prime
+algo2 : 17 | 3600000269 Processing time: 19246 milliseconds(s)
+algo2 : 18 | 3840000289 is prime
+algo2 : 18 | 3840000289 Processing time: 21079 milliseconds(s)
+algo2 : 19 | 4080000293 is prime
+algo2 : 19 | 4080000293 Processing time: 23438 milliseconds(s)
+algo2 : 20 | 4320000329 is prime
+algo2 : 20 | 4320000329 Processing time: 22867 milliseconds(s)
+algo2 : 21 | 4560000343 is prime
+algo2 : 21 | 4560000343 Processing time: 25181 milliseconds(s)
+algo2 : 22 | 4800000347 is prime
+algo2 : 22 | 4800000347 Processing time: 25600 milliseconds(s)
+algo2 : 23 | 5040000443 is prime
+algo2 : 23 | 5040000443 Processing time: 27616 milliseconds(s)
+algo2 : 24 | 5280000461 is prime
+algo2 : 24 | 5280000461 Processing time: 28487 milliseconds(s)
+algo2 : 25 | 5520000463 is prime
+algo2 : 25 | 5520000463 Processing time: 29089 milliseconds(s)
+algo2 : 26 | 5760000473 is prime
+algo2 : 26 | 5760000473 Processing time: 32261 milliseconds(s)
+algo2 : 27 | 6000000511 is prime
+algo2 : 27 | 6000000511 Processing time: 31548 milliseconds(s)
+algo2 : 28 | 6240000581 is prime
+algo2 : 28 | 6240000581 Processing time: 34109 milliseconds(s)
+algo2 : 29 | 6480000589 is prime
+algo2 : 29 | 6480000589 Processing time: 34241 milliseconds(s)
+algo2 : 30 | 6720000593 is prime
+algo2 : 30 | 6720000593 Processing time: 36925 milliseconds(s)
+algo2 : 31 | 6960000613 is prime
+algo2 : 31 | 6960000613 Processing time: 37759 milliseconds(s)
+algo2 : 32 | 7200000623 is prime
+algo2 : 32 | 7200000623 Processing time: 39019 milliseconds(s)
+algo2 : 33 | 7440000629 is prime
+algo2 : 33 | 7440000629 Processing time: 40640 milliseconds(s)
+algo2 : 34 | 7680000703 is prime
+algo2 : 34 | 7680000703 Processing time: 40579 milliseconds(s)
+algo2 : 35 | 7920000707 is prime
+algo2 : 35 | 7920000707 Processing time: 43186 milliseconds(s)
+algo2 : 36 | 8160000721 is prime
+algo2 : 36 | 8160000721 Processing time: 43564 milliseconds(s)
+algo2 : 37 | 8400000727 is prime
+algo2 : 37 | 8400000727 Processing time: 44915 milliseconds(s)
+algo2 : 38 | 8640000749 is prime
+algo2 : 38 | 8640000749 Processing time: 47506 milliseconds(s)
+algo2 : 39 | 8880000757 is prime
+algo2 : 39 | 8880000757 Processing time: 49325 milliseconds(s)
+algo3 : 0 | 9120000809 is prime
+algo3 : 0 | 9120000809 Processing time: 49938 milliseconds(s)
+algo3 : 1 | 9360000827 is prime
+algo3 : 1 | 9360000827 Processing time: 52266 milliseconds(s)
+algo3 : 2 | 9600000833 is prime
+algo3 : 2 | 9600000833 Processing time: 55345 milliseconds(s)
+algo3 : 3 | 9840000869 is prime
+algo3 : 3 | 9840000869 Processing time: 58837 milliseconds(s)
+algo3 : 4 | 11 is prime
+algo3 : 4 | 11 Processing time: 0 milliseconds(s)
+algo3 : 5 | 240000029 is prime
+algo3 : 5 | 240000029 Processing time: 1282 milliseconds(s)
+algo3 : 6 | 480000077 is prime
+algo3 : 6 | 480000077 Processing time: 2596 milliseconds(s)
+algo3 : 7 | 720000103 is prime
+algo3 : 7 | 720000103 Processing time: 3800 milliseconds(s)
+algo3 : 8 | 960000131 is prime
+algo3 : 8 | 960000131 Processing time: 5058 milliseconds(s)
+algo3 : 9 | 1200000133 is prime
+algo3 : 9 | 1200000133 Processing time: 6645 milliseconds(s)
+algo3 : 10 | 1440000137 is prime
+algo3 : 10 | 1440000137 Processing time: 8251 milliseconds(s)
+algo3 : 11 | 1680000149 is prime
+algo3 : 11 | 1680000149 Processing time: 8878 milliseconds(s)
+algo3 : 12 | 1920000161 is prime
+algo3 : 12 | 1920000161 Processing time: 10653 milliseconds(s)
+algo3 : 13 | 2160000163 is prime
+algo3 : 13 | 2160000163 Processing time: 11368 milliseconds(s)
+algo3 : 14 | 2400000167 is prime
+algo3 : 14 | 2400000167 Processing time: 12718 milliseconds(s)
+algo3 : 15 | 2640000217 is prime
+algo3 : 15 | 2640000217 Processing time: 13888 milliseconds(s)
+algo3 : 16 | 2880000251 is prime
+algo3 : 16 | 2880000251 Processing time: 15852 milliseconds(s)
+algo3 : 17 | 3120000253 is prime
+algo3 : 17 | 3120000253 Processing time: 17035 milliseconds(s)
+algo3 : 18 | 3360000257 is prime
+algo3 : 18 | 3360000257 Processing time: 17690 milliseconds(s)
+algo3 : 19 | 3600000269 is prime
+algo3 : 19 | 3600000269 Processing time: 19202 milliseconds(s)
+algo3 : 20 | 3840000289 is prime
+algo3 : 20 | 3840000289 Processing time: 21586 milliseconds(s)
+algo3 : 21 | 4080000293 is prime
+algo3 : 21 | 4080000293 Processing time: 21488 milliseconds(s)
+algo3 : 22 | 4320000329 is prime
+algo3 : 22 | 4320000329 Processing time: 22831 milliseconds(s)
+algo3 : 23 | 4560000343 is prime
+algo3 : 23 | 4560000343 Processing time: 25366 milliseconds(s)
+algo3 : 24 | 4800000347 is prime
+algo3 : 24 | 4800000347 Processing time: 25264 milliseconds(s)
+algo3 : 25 | 5040000443 is prime
+algo3 : 25 | 5040000443 Processing time: 27292 milliseconds(s)
+algo3 : 26 | 5280000461 is prime
+algo3 : 26 | 5280000461 Processing time: 28545 milliseconds(s)
+algo3 : 27 | 5520000463 is prime
+algo3 : 27 | 5520000463 Processing time: 29675 milliseconds(s)
+algo3 : 28 | 5760000473 is prime
+algo3 : 28 | 5760000473 Processing time: 31117 milliseconds(s)
+algo3 : 29 | 6000000511 is prime
+algo3 : 29 | 6000000511 Processing time: 31896 milliseconds(s)
+algo3 : 30 | 6240000581 is prime
+algo3 : 30 | 6240000581 Processing time: 33883 milliseconds(s)
+algo3 : 31 | 6480000589 is prime
+algo3 : 31 | 6480000589 Processing time: 35032 milliseconds(s)
+algo3 : 32 | 6720000593 is prime
+algo3 : 32 | 6720000593 Processing time: 36007 milliseconds(s)
+algo3 : 33 | 6960000613 is prime
+algo3 : 33 | 6960000613 Processing time: 37652 milliseconds(s)
+algo3 : 34 | 7200000623 is prime
+algo3 : 34 | 7200000623 Processing time: 38661 milliseconds(s)
+algo3 : 35 | 7440000629 is prime
+algo3 : 35 | 7440000629 Processing time: 40722 milliseconds(s)
+algo3 : 36 | 7680000703 is prime
+algo3 : 36 | 7680000703 Processing time: 40767 milliseconds(s)
+algo3 : 37 | 7920000707 is prime
+algo3 : 37 | 7920000707 Processing time: 42951 milliseconds(s)
+algo3 : 38 | 8160000721 is prime
+algo3 : 38 | 8160000721 Processing time: 44373 milliseconds(s)
+algo3 : 39 | 8400000727 is prime
+algo3 : 39 | 8400000727 Processing time: 44344 milliseconds(s)
+
 
 ### Faça um gráfico para com o tempo de execução em função do tamanho da entrada dos testes realizados.
 
-#### 
+##### algo1:
+![(algo1](algo1.png)
+
+##### algo2:
+![algo2](algo2.png)
+
+##### algo3:
+![algo3](algo3.png)

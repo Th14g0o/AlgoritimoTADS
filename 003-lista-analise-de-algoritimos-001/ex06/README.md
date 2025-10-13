@@ -1,3 +1,28 @@
+### Determine as equações de tempo de execução do algoritmo 4.
+
+#### (2n / 4) / 4 + 9
+
+### Implemente, em C++ o algoritmo.
+
+```cpp
+bool primo_algo4(long long n) {
+    if (n == 1) return false; // 1
+    if (n == 2) return true; // 1
+    if (n % 2 == 0) return false; // 1
+    bool p = true; // 1
+    long long d = 3; // 1
+    while (p && d <= n / 2){ // (n / 2) / 2 + 3 -> passso ser 2
+        if (n % d == 0) p = false; // (n / 2) / 2 
+        d = d + 2; // 2
+    }
+    return p; // 1
+}
+```
+
+### Realize testes e preencha as tabelas a seguir com os resultados.
+
+Algo + iteração | Numero e tempo em milisegundo
+:---------:|:-------------------:
 algo1 : 0 | 2400000167 is prime
 algo1 : 0 | 2400000167 Processing time: 25253 milliseconds(s)
 algo1 : 1 | 2640000217 is prime
@@ -318,3 +343,5 @@ algo4 : 18 | 6720000595 is not prime
 algo4 : 18 | 6720000595 Processing time: 0 milliseconds(s)
 algo4 : 19 | 6960000615 is not prime
 algo4 : 19 | 6960000615 Processing time: 0 milliseconds(s)
+
+### Faça um gráfico para com o tempo de execução em função do tamanho da entrada dos testes realizados.
