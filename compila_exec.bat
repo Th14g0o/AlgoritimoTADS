@@ -1,3 +1,4 @@
-g++ -Wall 003-lista-analise-de-algoritimos-001/ex06/programa.cpp -o programa
+g++ -Wall 006-lista-forca-bruta-01\ex01\programa.cpp -o programa
 REM call programa.exe
-programa.exe < 003-lista-analise-de-algoritimos-001/ex06/entrada.txt > saida.txt
+programa.exe < entrada.txt 
+REM > saida.txt
