@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+h1{
+    margin-bottom: 1em;
+}
+input, button {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+canvas {
+    margin-top: 20px;
+}
+body > div {
+    display: flex;
+    align-items: center;
+    margin: 0.5em 0;
+}
+body > div div{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 0.5em 0;
+    margin-right: 0.5em;
+}
+body > div div label{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    
+}
+
+input{
+    outline: none;
+    border: none;
+    border: 1px solid deepskyblue;
+    color: white;
+    background-color: transparent;
+}
+
+button{
+    margin-top: 1em;
+    background-color: deepskyblue;
+    border: none;
+    color: white;
+}
+button:hover{
+    cursor: pointer;
+}
+
+
+.calc{
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}

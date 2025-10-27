@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plotar Função</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11.11.0/lib/browser/math.min.js"></script>
+    <link rel="stylesheet" href="graf.css" />
+</head>
+<body>
+    <h1>Calcular expressão simples</h1>
+
+    <div class="calc">
+        <label for="exprCalc">Expressão</label>
+        <input type="text" id="exprCalc" />
+        <br>
+        <button onclick="calc()">Calculor</button>
+        <p id="resposta"></p>
+    </div>
+
+    <h1>Gerar Graf</h1>
+
+    <label for="expression">Expressão (use <code>x</code> ou <code>n</code>):</label>
+    <input type="text" id="expression" placeholder="Ex: 2 * x ** 2 + 10 ou 100 *n + 500" />
+
+    <div>
+        <div>
+            <label for="xmin">Mínimo:</label>
+            <input type="number" id="xmin" value="0" />
+        </div>
+        <div>
+            <label for="xmax">Máximo:</label>
+            <input type="number" id="xmax" value="100" />
+        </div>
+    </div>
+
+    <label for="step">Passo:</label>
+    <input type="number" id="step" value="1" step="1" />
+
+    <button onclick="plot()">Gerar</button>
+
+    <h1>Gerar gráfico por lista</h1>
+
+    <label for="xvalues">Lista de X (separado por vírgulas):</label>
+    <input type="text" id="xvalues" placeholder="Ex: 0,1,2,3,4,5" />
+
+    <br>
+
+    <label for="yvalues">Lista de Y (separado por vírgulas):</label>
+    <input type="text" id="yvalues" placeholder="Ex: 5,10,7,12,9,15" />
+
+    <br>
+
+    <button onclick="plotList()">Gerar gráfico por lista</button>
+
+    <canvas id="chartList" width="400" height="300"></canvas>
+
+
+    <canvas id="chart" width="400" height="300"></canvas>
+    <script src="graf.js"></script>
+    <script src="calc.js"></script>
+</body>
+</html>
