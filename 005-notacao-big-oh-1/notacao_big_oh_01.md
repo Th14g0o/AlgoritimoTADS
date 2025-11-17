@@ -259,8 +259,6 @@ int fE(int n){
 - O loop interno, como escrito, é `for (j=0; j<n/2; j++)` → executa ~n/2 vezes; a operação interna é O(1) (a expressão `n%j` é O(1)).
 - Total: O((n) * log n) = **O(n log n)**.
 
-> Observação: cuidado com `n%j` quando `j==0` — no código real é necessário evitar divisão por zero. Aqui mantivemos a estrutura como no enunciado e assumimos `j` inicia em 1.
-
 ## Questão 8
 Vírus que dobra a cada dia: dado população `P`, quantos dias até todos estarem infectados (começando com 1 infectado)?
 
@@ -284,7 +282,6 @@ int main(){
 }
 ```
 
----
 ## Questão 9
 Material que perde metade da massa a cada período `t` (segundos). Dada massa inicial `mi` (real) e período `t`, determinar quanto tempo (segundos) até a massa ser ≤ 1g.
 
