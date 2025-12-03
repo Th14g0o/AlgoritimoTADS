@@ -8,7 +8,7 @@ class vector{
         {
             this->capacity_ += this->increase_size_;
             int *new_data = new int[this->capacity_];
-            for (int i = 0; i < this->size_; ++i)
+            for (unsigned int i = 0; i < this->size_; ++i)
                 new_data[i] = data[i];
             delete[] this->data;
             this->data = new_data;
@@ -17,7 +17,7 @@ class vector{
         {
             this->capacity_ -= this->increase_size_;
             int *new_data = new int[this->capacity_];
-            for (int i = 0; i < this->size_; ++i)
+            for (unsigned int i = 0; i < this->size_; ++i)
                 new_data[i] = data[i];
             delete[] this->data;
             this->data = new_data;
@@ -46,7 +46,7 @@ class vector{
         }
         int get_at(int index)
         {
-            if (index < 0 or index >= size())
+            if (index < 0 or index >= (long long) size())
                 throw std::out_of_range("Index out of range");
             return this->data[index];
         }
@@ -59,7 +59,7 @@ class vector{
             return this->capacity_;
         }
         int index_of(int value){
-            for (int index = 0; index < size(); index++) 
+            for (unsigned int index = 0; index < size(); index++) 
                 if (this->data[index] == value) return index;
             return -1;
         }
@@ -74,7 +74,7 @@ class vector{
             return false;
         }
         bool remove_at(int index){
-            if (index >= 0 && index < this->size()){
+            if (index >= 0 && index < (long long) this->size()){
                 this->reorganize_at(index);
                 return true;
             }
