@@ -12,8 +12,8 @@ bool ordenado(int a[], int t) {
 }
 
 /* TODO: Implementar função */
-void selecao(int a[], unsigned int t){
-    unsigned int i, j; 
+void selecao(int a[], int t){
+    int i, j; 
     int min, aux;
     for (i = 0; i < (t-1); i++){
         min = i;
@@ -30,8 +30,8 @@ void selecao(int a[], unsigned int t){
 }
 
 /* TODO: Implementar função */
-void insercao(int a[], unsigned int t){
-    unsigned int i,x;
+void insercao(int a[], int t){
+    int i,x;
     for (i=0 ; i<t ; ++i){
         int key = a[i];
         x = i - 1;
@@ -66,7 +66,7 @@ void merge(int a[], int i1, int j1, int i2, int j2) {
     delete[] temp;
 }
 
-void merge_sort(int a[], unsigned int primeiro, unsigned int ultimo){
+void merge_sort(int a[], int primeiro, int ultimo){
     int meio;
     if (primeiro < ultimo) {
         meio = (primeiro + ultimo) / 2;

@@ -1,0 +1,1 @@
+10 Tempo de ordenação: 4 microsegundo(s)

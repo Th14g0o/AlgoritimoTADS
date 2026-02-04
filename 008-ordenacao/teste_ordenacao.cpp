@@ -75,8 +75,9 @@ int main(int argc, char **argv) {
     }
     auto end = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - beg);
-    std::cerr << n << " Tempo de ordenação: " << duration.count() << " microsegundo(s)" << std::endl;
-    if (!ordenado(a, n)) {
+    std::cerr << n << " Tempo de ordenação: " << duration.count() << " microsegundo(s)" << std::endl; 
+    std::cout << n << " Tempo de ordenação: " << duration.count() << " microsegundo(s)" << std::endl;
+    if (not ordenado(a, n)) {
         std::cerr << "\033[0;31mErro:\033[0m Array não ordenado. Saindo...\n";
         exit(-1);
     }

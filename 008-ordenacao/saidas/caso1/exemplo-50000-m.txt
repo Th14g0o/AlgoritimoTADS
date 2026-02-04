@@ -1,0 +1,1 @@
+50000 Tempo de ordenação: 8963 microsegundo(s)
