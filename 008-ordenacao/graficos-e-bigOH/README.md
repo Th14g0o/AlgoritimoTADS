@@ -86,4 +86,4 @@ void merge_sort(int a[], int primeiro, int ultimo){
 
 > nos casos 2, 4 e 1 o insert é mais eficiente que o de seleção
 
-> No caso 2 a inserção e o merge tiveram valores tão proximos que a barra do insert e desenhado embaixo.
+> No caso 2 a inserção e o merge tiveram valores tão proximos que a barra do insert é desenhado embaixo do merge.
