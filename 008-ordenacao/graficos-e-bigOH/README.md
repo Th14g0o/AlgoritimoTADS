@@ -83,5 +83,7 @@ void merge_sort(int a[], int primeiro, int ultimo){
 ### O merge-sort é o mais eficiente em todos os casos testados
 
 > Nos casos 3 e 5 a seleção é mais eficiente que o de inserção
+
 > nos casos 2, 4 e 1 o insert é mais eficiente que o de seleção
+
 > No caso 2 a inserção e o merge tiveram valores tão proximos que a barra do insert e desenhado embaixo.
